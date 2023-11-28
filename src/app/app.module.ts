@@ -8,11 +8,18 @@ import { FormsModule } from '@angular/forms';
 import { MessageDetailsComponent } from './message-details/message-details.component';
 import { MenuComponent } from './menu/menu.component';
 import { AboutComponent } from './about/about.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  declarations: [AppComponent, MyFirstCompComponent, MessageDetailsComponent, MenuComponent, AboutComponent],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
-  providers: [],
+  declarations: [
+    AppComponent,
+    MyFirstCompComponent,
+    MessageDetailsComponent,
+    MenuComponent,
+    AboutComponent,
+  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
+  providers: [HttpClient],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
